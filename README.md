@@ -30,7 +30,7 @@ This repository contains the code and resources for a real-time data pipeline th
 
 Below is a high-level diagram of the improved architecture:
 
-![Real-Time E-Commerce Pipeline Architecture](https://rushirao17.githubusercontent.com/images/architecture_diagram.png)
+![Real-Time E-Commerce Pipeline Architecture](https://github.com/rushirao17/Ecommerce-Transaction-Real-Time-Data-Pipeline/blob/main/images/architecture_diagram.png)
 
 ---
 
