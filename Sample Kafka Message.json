@@ -1,0 +1,45 @@
+{
+    "order_id": "ORD234567",
+    "customer": {
+      "customer_id": "CUST001",
+      "first_name": "Amit",
+      "last_name": "Sharma",
+      "email": "amitsharma@example.com",
+      "phone": "+918765432100",
+      "shipping_address": {
+        "street": "45 Park Avenue",
+        "city": "Mumbai",
+        "state": "MH",
+        "postal_code": "400001",
+        "country": "India"
+      }
+    },
+    "order_details": {
+      "items": [
+        {
+          "product_id": "PROD789",
+          "product_name": "LED Monitor",
+          "quantity": 1,
+          "price_per_unit": 7999.99
+        },
+        {
+          "product_id": "PROD012",
+          "product_name": "USB-C Hub",
+          "quantity": 2,
+          "price_per_unit": 1499.99
+        }
+      ],
+      "subtotal": 10999.97,
+      "tax": 1979.99,
+      "shipping_fee": 200.00,
+      "total_amount": 13279.96
+    },
+    "payment": {
+      "payment_method": "UPI",
+      "payment_status": "Completed",
+      "transaction_id": "TXN1234567890",
+      "payment_date": "2024-12-13T11:00:00Z"
+    },
+    "order_status": "Shipped",
+    "timestamp": "2024-12-13T11:05:00Z"
+}
