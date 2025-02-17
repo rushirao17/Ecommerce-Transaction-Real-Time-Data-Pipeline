@@ -1,0 +1,49 @@
+CREATE TABLE customers (
+  customer_id VARCHAR(50) PRIMARY KEY,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  email VARCHAR(255),
+  phone VARCHAR(20),
+  street VARCHAR(255),
+  city VARCHAR(100),
+  state VARCHAR(100),
+  postal_code VARCHAR(20),
+  country VARCHAR(100),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE orders (
+  order_id VARCHAR(50) PRIMARY KEY,
+  customer_id VARCHAR(50),
+  order_status VARCHAR(50),
+  subtotal DECIMAL(10, 2),
+  tax DECIMAL(10, 2),
+  shipping_fee DECIMAL(10, 2),
+  total_amount DECIMAL(10, 2),
+  order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  payment_status VARCHAR(50),
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+
+CREATE TABLE order_details (
+  order_detail_id SERIAL PRIMARY KEY,
+  order_id VARCHAR(50),
+  product_id VARCHAR(50),
+  product_name VARCHAR(255),
+  quantity INT,
+  price_per_unit DECIMAL(10, 2),
+  FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
+
+
+CREATE TABLE payments (
+  payment_id SERIAL PRIMARY KEY,
+  order_id VARCHAR(50),
+  payment_method VARCHAR(50),
+  payment_status VARCHAR(50),
+  transaction_id VARCHAR(100),
+  payment_date TIMESTAMP,
+  FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
